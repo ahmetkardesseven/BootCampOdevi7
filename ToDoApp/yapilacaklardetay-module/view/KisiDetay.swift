@@ -7,27 +7,27 @@
 
 import UIKit
 
-class KisiDetay: UIViewController {
+class YapilacakDetay: UIViewController {
     @IBOutlet weak var tfKisiAd: UITextField!
     
-    var kisi:Kisiler?
+    var kisi:Yapilacaklar?
     
-    var kisiDetayPresenterNesnesi:ViewToPresenterKisiDetayProtocol?
+    var YapilacakDetayPresenterNesnesi:ViewToPresenterYapilacakDetayProtocol?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        KisiDetayRouter.createModule(ref: self)
+        YapilacakDetayRouter.createModule(ref: self)
 
         if let k = kisi {
-            tfKisiAd.text = k.kisi_ad
+            tfKisiAd.text = k.yapilacak_ad
             
         }
     }
     
     @IBAction func buttonGuncelle(_ sender: Any) {
         if let ka = tfKisiAd.text, let k = kisi {
-            kisiDetayPresenterNesnesi?.guncelle(kisi_id: k.kisi_id!, kisi_ad: ka)
+            YapilacakDetayPresenterNesnesi?.guncelle(yapilacak_id: k.yapilacak_id!, yapilacak_ad: ka)
         }
     }
     

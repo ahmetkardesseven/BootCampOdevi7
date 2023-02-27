@@ -7,9 +7,9 @@
 
 import Foundation
 
-class KisiDetayRouter : PresenterToRouterKisiDetayProtocol{
-    static func createModule(ref: KisiDetay) {
-        ref.kisiDetayPresenterNesnesi = KisiDetayPresenter()
-        ref.kisiDetayPresenterNesnesi?.kisiDetayInteractor = KisiDetayInteractor()
+class YapilacakDetayRouter : PresenterToRouterYapilacakDetayProtocol{
+    static func createModule(ref: YapilacakDetay) {
+        ref.YapilacakDetayPresenterNesnesi = YapilacakDetayPresenter()
+        ref.YapilacakDetayPresenterNesnesi?.YapilacakDetayInteractor = YapilacakDetayInteractor()
     }
 }

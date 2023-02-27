@@ -7,7 +7,7 @@
 
 import Foundation
 
-class KisiDetayInteractor : PresenterToInteractorKisiDetayProtocol {
+class YapilacakDetayInteractor : PresenterToInteractorYapilacakDetayProtocol {
     
     let db:FMDatabase?
     
@@ -17,11 +17,11 @@ class KisiDetayInteractor : PresenterToInteractorKisiDetayProtocol {
         db = FMDatabase(path: veritabaniURL.path)
     }
     
-    func guncelle(kisi_id: Int, kisi_ad: String) {
+    func guncelle(yapilacak_id yapilacak_id: Int, yapilacak_ad yapilacak_ad: String) {
         db?.open()
         
         do{
-            try db!.executeUpdate("UPDATE kisiler SET kisi_ad = ?", values: [kisi_ad,kisi_id])
+            try db!.executeUpdate("UPDATE kisiler SET kisi_ad = ?", values: [yapilacak_ad,yapilacak_id])
         }catch{
             print(error.localizedDescription)
         }

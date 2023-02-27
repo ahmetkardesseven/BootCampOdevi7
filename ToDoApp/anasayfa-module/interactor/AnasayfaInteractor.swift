@@ -19,7 +19,7 @@ class AnasayfaInteractor : PresenterToInteractorAnasayfaProtocol {
     }
     
     func kisileriYukle() {
-        var liste = [Kisiler]()
+        var liste = [Yapilacaklar]()
         
         db?.open()
         
@@ -27,12 +27,12 @@ class AnasayfaInteractor : PresenterToInteractorAnasayfaProtocol {
             let rs = try db!.executeQuery("SELECT * FROM kisiler", values: nil)
             
             while rs.next() {
-                let kisi_id = Int(rs.string(forColumn: "kisi_id"))!
-                let kisi_ad = rs.string(forColumn: "kisi_ad")!
+                let yapilacak_id = Int(rs.string(forColumn: "kisi_id"))!
+                let yapilacak_ad = rs.string(forColumn: "kisi_ad")!
                 
                 
-                let kisi = Kisiler(kisi_id: kisi_id, kisi_ad: kisi_ad)
-                liste.append(kisi)
+                let yapilacak = Yapilacaklar(yapilacak_id: yapilacak_id, yapilacak_ad: yapilacak_ad)
+                liste.append(yapilacak)
             }
             
             anasayfaPresenter?.presenteraVeriGonder(kisilerListesi: liste)
@@ -44,7 +44,7 @@ class AnasayfaInteractor : PresenterToInteractorAnasayfaProtocol {
     }
     
     func ara(aramaKelimesi: String) {
-        var liste = [Kisiler]()
+        var liste = [Yapilacaklar]()
         
         db?.open()
         
@@ -52,12 +52,12 @@ class AnasayfaInteractor : PresenterToInteractorAnasayfaProtocol {
             let rs = try db!.executeQuery("SELECT * FROM kisiler WHERE kisi_ad like ?", values: ["%\(aramaKelimesi)%"])
             
             while rs.next() {
-                let kisi_id = Int(rs.string(forColumn: "kisi_id"))!
-                let kisi_ad = rs.string(forColumn: "kisi_ad")!
+                let yapilacak_id = Int(rs.string(forColumn: "kisi_id"))!
+                let yapilacak_ad = rs.string(forColumn: "kisi_ad")!
                 
                 
-                let kisi = Kisiler(kisi_id: kisi_id, kisi_ad: kisi_ad)
-                liste.append(kisi)
+                let yapilacak = Yapilacaklar(yapilacak_id: yapilacak_id, yapilacak_ad: yapilacak_ad)
+                liste.append(yapilacak)
             }
             
             anasayfaPresenter?.presenteraVeriGonder(kisilerListesi: liste)
@@ -68,11 +68,11 @@ class AnasayfaInteractor : PresenterToInteractorAnasayfaProtocol {
         db?.close()
     }
     
-    func `sil`(kisi_id: Int) {
+    func `sil`(yapilacak_id: Int) {
         db?.open()
         
         do{
-            try db!.executeUpdate("DELETE FROM kisiler WHERE kisi_id = ?", values: [kisi_id])
+            try db!.executeUpdate("DELETE FROM kisiler WHERE kisi_id = ?", values: [yapilacak_id])
             kisileriYukle()
         }catch{
             print(error.localizedDescription)

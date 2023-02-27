@@ -19,13 +19,13 @@ class AnasayfaPresenter : ViewToPresenterAnasayfaProtocol {
         anasayfaInteractor?.ara(aramaKelimesi: aramaKelimesi)
     }
     
-    func `sil`(kisi_id: Int) {
-        anasayfaInteractor?.sil(kisi_id: kisi_id)
+    func `sil`(yapilacak_id : Int) {
+        anasayfaInteractor?.sil(yapilacak_id: yapilacak_id)
     }
 }
 
 extension AnasayfaPresenter : InteractorToPresenterAnasayfaProtocol {
-    func presenteraVeriGonder(kisilerListesi: [Kisiler]) {
+    func presenteraVeriGonder(kisilerListesi: [Yapilacaklar]) {
         anasayfaView?.vieweVeriGonder(kisilerListesi: kisilerListesi)
     }
 }

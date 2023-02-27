@@ -7,21 +7,21 @@
 
 import UIKit
 
-class KisiKayit: UIViewController {
+class YapilacaklariEkle: UIViewController {
 
     @IBOutlet weak var tfKisiAd: UITextField!
     
     
-    var kisiKayitPresenterNesnesi:ViewToPresenterKisiKayitProtocol?
+    var YapilacaklariEklePresenterNesnesi:ViewToPresenterYapilacaklariEkleProtocol?
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        KisiKayitRouter.createModule(ref: self)
+        YapilacaklariEkleRouter.createModule(ref: self)
     }
 
     @IBAction func buttonKaydet(_ sender: Any) {
         if let ka = tfKisiAd.text {
-            kisiKayitPresenterNesnesi?.kaydet(kisi_ad: ka)
+            YapilacaklariEklePresenterNesnesi?.kaydet(yapilacak_ad: ka)
         }
     }
 

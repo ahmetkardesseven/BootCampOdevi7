@@ -13,7 +13,7 @@ protocol ViewToPresenterAnasayfaProtocol {
     
     func kisileriYukle()
     func ara(aramaKelimesi:String)
-    func sil(kisi_id:Int)
+    func sil(yapilacak_id:Int)
 }
 
 protocol PresenterToInteractorAnasayfaProtocol {
@@ -21,16 +21,16 @@ protocol PresenterToInteractorAnasayfaProtocol {
     
     func kisileriYukle()
     func ara(aramaKelimesi:String)
-    func sil(kisi_id:Int)
+    func sil(yapilacak_id:Int)
 }
 
 //Taşıyıcı Protocoller
 protocol InteractorToPresenterAnasayfaProtocol {
-    func presenteraVeriGonder(kisilerListesi:[Kisiler])
+    func presenteraVeriGonder(kisilerListesi:[Yapilacaklar])
 }
 
 protocol PresenterToViewAnasayfaProtocol {
-    func vieweVeriGonder(kisilerListesi:[Kisiler])
+    func vieweVeriGonder(kisilerListesi:[Yapilacaklar])
 }
 
 //Router Protocol

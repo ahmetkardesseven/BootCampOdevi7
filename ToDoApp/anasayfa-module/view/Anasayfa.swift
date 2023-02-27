@@ -11,7 +11,7 @@ class Anasayfa: UIViewController {
     @IBOutlet weak var searchBar: UISearchBar!
     @IBOutlet weak var kisilerTableView: UITableView!
     
-    var kisilerListe = [Kisiler]()
+    var kisilerListe = [Yapilacaklar]()
     
     var anasayfaPresenterNesnesi:ViewToPresenterAnasayfaProtocol?
     
@@ -51,8 +51,8 @@ class Anasayfa: UIViewController {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "toDetay" {
-            if let kisi = sender as? Kisiler {
-                let gidilecekVC = segue.destination as! KisiDetay
+            if let kisi = sender as? Yapilacaklar {
+                let gidilecekVC = segue.destination as! YapilacakDetay
                 gidilecekVC.kisi = kisi
             }
         }
@@ -60,7 +60,7 @@ class Anasayfa: UIViewController {
 }
 
 extension Anasayfa : PresenterToViewAnasayfaProtocol {
-    func vieweVeriGonder(kisilerListesi: [Kisiler]) {
+    func vieweVeriGonder(kisilerListesi: [Yapilacaklar]) {
         self.kisilerListe = kisilerListesi
         self.kisilerTableView.reloadData()
     }
@@ -82,7 +82,7 @@ extension Anasayfa : UITableViewDelegate,UITableViewDataSource {
         
         let kisi = kisilerListe[indexPath.row]
         
-        hucre.labelAd.text = kisi.kisi_ad
+        hucre.labelAd.text = kisi.yapilacak_ad
         
         
         return hucre
@@ -99,12 +99,12 @@ extension Anasayfa : UITableViewDelegate,UITableViewDataSource {
         let silAction = UIContextualAction(style: .destructive, title: "Sil"){ (contextualAction,view,bool) in
             let kisi = self.kisilerListe[indexPath.row]
             
-            let alert = UIAlertController(title: "Silme İşlemi", message: "\(kisi.kisi_ad!) silinsin mi ?", preferredStyle: .alert)
+            let alert = UIAlertController(title: "Silme İşlemi", message: "\(kisi.yapilacak_ad!) silinsin mi ?", preferredStyle: .alert)
             let iptalAction = UIAlertAction(title: "İptal", style: .cancel)
             alert.addAction(iptalAction)
             
             let evetAction = UIAlertAction(title: "Evet", style: .destructive){ action in
-                self.anasayfaPresenterNesnesi?.sil(kisi_id: kisi.kisi_id!)
+                self.anasayfaPresenterNesnesi?.sil(yapilacak_id: kisi.yapilacak_id!)
             }
             alert.addAction(evetAction)
             

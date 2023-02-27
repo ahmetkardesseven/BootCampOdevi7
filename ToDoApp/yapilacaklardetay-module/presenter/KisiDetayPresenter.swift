@@ -8,10 +8,10 @@
 import Foundation
 
 
-class KisiDetayPresenter : ViewToPresenterKisiDetayProtocol  {
-    var kisiDetayInteractor: PresenterToInteractorKisiDetayProtocol?
+class YapilacakDetayPresenter : ViewToPresenterYapilacakDetayProtocol  {
+    var YapilacakDetayInteractor: PresenterToInteractorYapilacakDetayProtocol?
     
-    func guncelle(kisi_id: Int, kisi_ad: String) {
-        kisiDetayInteractor?.guncelle(kisi_id: kisi_id, kisi_ad: kisi_ad)
+    func guncelle(yapilacak_id: Int, yapilacak_ad: String) {
+        YapilacakDetayInteractor?.guncelle(yapilacak_id: yapilacak_id, yapilacak_ad: yapilacak_ad)
     }
 }

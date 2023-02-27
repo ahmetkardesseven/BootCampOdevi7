@@ -7,10 +7,10 @@
 
 import Foundation
 
-class KisiKayitPresenter : ViewToPresenterKisiKayitProtocol {
-    var kisiKayitInteractor: PresenterToInteractorKisiKayitProtocol?
+class YapilacaklariEklePresenter : ViewToPresenterYapilacaklariEkleProtocol {
+    var YapilacaklariEkleInteractor: PresenterToInteractorYapilacaklariEkleProtocol?
     
-    func kaydet(kisi_ad: String) {
-        kisiKayitInteractor?.kaydet(kisi_ad: kisi_ad)
+    func kaydet(yapilacak_ad: String) {
+        YapilacaklariEkleInteractor?.kaydet(yapilacak_ad: yapilacak_ad)
     }
 }

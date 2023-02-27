@@ -7,7 +7,7 @@
 
 import Foundation
 
-class KisiKayitInteractor : PresenterToInteractorKisiKayitProtocol {
+class YapilacaklariEkleInteractor : PresenterToInteractorYapilacaklariEkleProtocol {
     
     let db:FMDatabase?
     
@@ -17,11 +17,11 @@ class KisiKayitInteractor : PresenterToInteractorKisiKayitProtocol {
         db = FMDatabase(path: veritabaniURL.path)
     }
     
-    func kaydet(kisi_ad: String) {
+    func kaydet(yapilacak_ad: String) {
         db?.open()
         
         do{
-            try db!.executeUpdate("INSERT INTO kisiler (kisi_ad) VALUES (?)", values: [kisi_ad])
+            try db!.executeUpdate("INSERT INTO kisiler (kisi_ad) VALUES (?)", values: [yapilacak_ad])
         }catch{
             print(error.localizedDescription)
         }

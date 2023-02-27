@@ -7,12 +7,12 @@
 
 import Foundation
 
-class Kisiler {
-    var kisi_id:Int?
-    var kisi_ad:String?
+class Yapilacaklar {
+    var yapilacak_id:Int?
+    var yapilacak_ad:String?
     
-    init(kisi_id: Int, kisi_ad: String) {
-        self.kisi_id = kisi_id
-        self.kisi_ad = kisi_ad
+    init(yapilacak_id: Int, yapilacak_ad: String) {
+        self.yapilacak_id = yapilacak_id
+        self.yapilacak_ad = yapilacak_ad
     }
 }

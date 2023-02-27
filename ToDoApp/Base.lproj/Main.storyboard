@@ -8,7 +8,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Kişiler-->
+        <!--Yapılacaklar-->
         <scene sceneID="SgU-S0-5ji">
             <objects>
                 <viewController id="7DP-HI-vSe" customClass="Anasayfa" customModule="ToDoApp" customModuleProvider="target" sceneMemberID="viewController">
@@ -70,7 +70,7 @@
                             <constraint firstItem="JM7-0L-6zr" firstAttribute="trailing" secondItem="1Sd-uz-SGS" secondAttribute="trailing" id="wOP-KO-DtE"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Kişiler" id="OiE-Lf-Q45">
+                    <navigationItem key="navigationItem" title="Yapılacaklar" id="OiE-Lf-Q45">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="cKg-zg-fmI">
                             <connections>
                                 <segue destination="hRv-2h-nuq" kind="show" id="vlQ-Ue-rEe"/>
@@ -87,15 +87,15 @@
             </objects>
             <point key="canvasLocation" x="772" y="806"/>
         </scene>
-        <!--Kişi Detay-->
+        <!--Yapılacak Detay-->
         <scene sceneID="lJV-Xr-i6U">
             <objects>
-                <viewController id="jDC-In-DnD" customClass="KisiDetay" customModule="ToDoApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="jDC-In-DnD" customClass="YapilacakDetay" customModule="ToDoApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="gaP-Q3-Mnf">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Kişi Ad" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ioo-oP-axW">
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Yapılacak" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ioo-oP-axW">
                                 <rect key="frame" x="50" y="202.5" width="314" height="45.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                 <textInputTraits key="textInputTraits"/>
@@ -121,7 +121,7 @@
                             <constraint firstItem="8hu-3p-7Bp" firstAttribute="trailing" secondItem="ioo-oP-axW" secondAttribute="trailing" constant="50" id="wAl-8Z-YhR"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Kişi Detay" id="aJr-yp-iTq"/>
+                    <navigationItem key="navigationItem" title="Yapılacak Detay" id="aJr-yp-iTq"/>
                     <connections>
                         <outlet property="tfKisiAd" destination="ioo-oP-axW" id="pz1-NW-BWf"/>
                     </connections>
@@ -130,15 +130,15 @@
             </objects>
             <point key="canvasLocation" x="1508" y="1173"/>
         </scene>
-        <!--Kişi Kayıt-->
+        <!--Yapılacaklar Ekle-->
         <scene sceneID="Xr5-dM-aNe">
             <objects>
-                <viewController id="hRv-2h-nuq" customClass="KisiKayit" customModule="ToDoApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="hRv-2h-nuq" customClass="YapilacaklariEkle" customModule="ToDoApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="G1o-5R-OnB">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Kişi Ad" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xkk-nK-0WC">
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Yapılacak" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xkk-nK-0WC">
                                 <rect key="frame" x="50" y="202.5" width="314" height="45.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                 <textInputTraits key="textInputTraits"/>
@@ -164,7 +164,7 @@
                             <constraint firstItem="lZh-kE-TJK" firstAttribute="trailing" secondItem="xkk-nK-0WC" secondAttribute="trailing" constant="50" id="ccJ-py-G4I"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Kişi Kayıt" id="Wh1-GO-Lf8"/>
+                    <navigationItem key="navigationItem" title="Yapılacaklar Ekle" id="Wh1-GO-Lf8"/>
                     <connections>
                         <outlet property="tfKisiAd" destination="xkk-nK-0WC" id="l9f-zE-5CF"/>
                     </connections>
@@ -179,7 +179,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Pbe-r3-Lya" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="Uih-nV-A2q">
-                        <rect key="frame" x="0.0" y="48" width="414" height="96"/>
+                        <rect key="frame" x="0.0" y="48" width="414" height="104.5"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>

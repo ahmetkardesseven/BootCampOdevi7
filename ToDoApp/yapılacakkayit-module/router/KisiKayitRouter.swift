@@ -8,9 +8,9 @@
 import Foundation
 
 
-class KisiKayitRouter : PresenterToRouterKisiKayitProtocol {
-    static func createModule(ref: KisiKayit) {
-        ref.kisiKayitPresenterNesnesi = KisiKayitPresenter()
-        ref.kisiKayitPresenterNesnesi?.kisiKayitInteractor = KisiKayitInteractor()
+class YapilacaklariEkleRouter : PresenterToRouterYapilacaklariEkleProtocol {
+    static func createModule(ref: YapilacaklariEkle) {
+        ref.YapilacaklariEklePresenterNesnesi = YapilacaklariEklePresenter()
+        ref.YapilacaklariEklePresenterNesnesi?.YapilacaklariEkleInteractor = YapilacaklariEkleInteractor()
     }
 }
