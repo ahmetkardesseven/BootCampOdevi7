@@ -10,7 +10,7 @@ import UIKit
 class TableViewHucre: UITableViewCell {
     
     @IBOutlet weak var labelAd: UILabel!
-    @IBOutlet weak var labelTel: UILabel!
+    
     
     override func awakeFromNib() {
         super.awakeFromNib()

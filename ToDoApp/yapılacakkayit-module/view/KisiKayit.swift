@@ -10,7 +10,7 @@ import UIKit
 class KisiKayit: UIViewController {
 
     @IBOutlet weak var tfKisiAd: UITextField!
-    @IBOutlet weak var tfKisiTel: UITextField!
+    
     
     var kisiKayitPresenterNesnesi:ViewToPresenterKisiKayitProtocol?
     
@@ -20,8 +20,8 @@ class KisiKayit: UIViewController {
     }
 
     @IBAction func buttonKaydet(_ sender: Any) {
-        if let ka = tfKisiAd.text , let kt = tfKisiTel.text {
-            kisiKayitPresenterNesnesi?.kaydet(kisi_ad: ka, kisi_tel: kt)
+        if let ka = tfKisiAd.text {
+            kisiKayitPresenterNesnesi?.kaydet(kisi_ad: ka)
         }
     }
 

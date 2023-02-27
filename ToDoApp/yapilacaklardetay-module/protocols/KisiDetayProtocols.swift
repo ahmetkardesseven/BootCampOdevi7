@@ -8,13 +8,13 @@
 import Foundation
 
 protocol PresenterToInteractorKisiDetayProtocol {
-    func guncelle(kisi_id:Int,kisi_ad:String,kisi_tel:String)
+    func guncelle(kisi_id:Int,kisi_ad:String)
 }
 
 protocol ViewToPresenterKisiDetayProtocol {
     var kisiDetayInteractor:PresenterToInteractorKisiDetayProtocol? {get set}
     
-    func guncelle(kisi_id:Int,kisi_ad:String,kisi_tel:String)
+    func guncelle(kisi_id:Int,kisi_ad:String)
 }
 
 protocol PresenterToRouterKisiDetayProtocol {

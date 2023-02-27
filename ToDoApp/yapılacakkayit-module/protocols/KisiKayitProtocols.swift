@@ -11,11 +11,11 @@ import Foundation
 protocol ViewToPresenterKisiKayitProtocol {
     var kisiKayitInteractor:PresenterToInteractorKisiKayitProtocol? {get set}
     
-    func kaydet(kisi_ad:String,kisi_tel:String)
+    func kaydet(kisi_ad:String)
 }
 
 protocol PresenterToInteractorKisiKayitProtocol{
-    func kaydet(kisi_ad:String,kisi_tel:String)
+    func kaydet(kisi_ad:String)
 }
 
 protocol PresenterToRouterKisiKayitProtocol  {

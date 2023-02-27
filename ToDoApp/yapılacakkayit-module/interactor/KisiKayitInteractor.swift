@@ -17,11 +17,11 @@ class KisiKayitInteractor : PresenterToInteractorKisiKayitProtocol {
         db = FMDatabase(path: veritabaniURL.path)
     }
     
-    func kaydet(kisi_ad: String, kisi_tel: String) {
+    func kaydet(kisi_ad: String) {
         db?.open()
         
         do{
-            try db!.executeUpdate("INSERT INTO kisiler (kisi_ad,kisi_tel) VALUES (?,?)", values: [kisi_ad,kisi_tel])
+            try db!.executeUpdate("INSERT INTO kisiler (kisi_ad) VALUES (?)", values: [kisi_ad])
         }catch{
             print(error.localizedDescription)
         }

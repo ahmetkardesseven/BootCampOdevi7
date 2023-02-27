@@ -29,9 +29,9 @@ class AnasayfaInteractor : PresenterToInteractorAnasayfaProtocol {
             while rs.next() {
                 let kisi_id = Int(rs.string(forColumn: "kisi_id"))!
                 let kisi_ad = rs.string(forColumn: "kisi_ad")!
-                let kisi_tel = rs.string(forColumn: "kisi_tel")!
                 
-                let kisi = Kisiler(kisi_id: kisi_id, kisi_ad: kisi_ad, kisi_tel: kisi_tel)
+                
+                let kisi = Kisiler(kisi_id: kisi_id, kisi_ad: kisi_ad)
                 liste.append(kisi)
             }
             
@@ -54,9 +54,9 @@ class AnasayfaInteractor : PresenterToInteractorAnasayfaProtocol {
             while rs.next() {
                 let kisi_id = Int(rs.string(forColumn: "kisi_id"))!
                 let kisi_ad = rs.string(forColumn: "kisi_ad")!
-                let kisi_tel = rs.string(forColumn: "kisi_tel")!
                 
-                let kisi = Kisiler(kisi_id: kisi_id, kisi_ad: kisi_ad, kisi_tel: kisi_tel)
+                
+                let kisi = Kisiler(kisi_id: kisi_id, kisi_ad: kisi_ad)
                 liste.append(kisi)
             }
             

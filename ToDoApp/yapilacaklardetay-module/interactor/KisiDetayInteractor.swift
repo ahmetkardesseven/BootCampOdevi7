@@ -17,11 +17,11 @@ class KisiDetayInteractor : PresenterToInteractorKisiDetayProtocol {
         db = FMDatabase(path: veritabaniURL.path)
     }
     
-    func guncelle(kisi_id: Int, kisi_ad: String, kisi_tel: String) {
+    func guncelle(kisi_id: Int, kisi_ad: String) {
         db?.open()
         
         do{
-            try db!.executeUpdate("UPDATE kisiler SET kisi_ad = ? , kisi_tel = ? WHERE kisi_id = ?", values: [kisi_ad,kisi_tel,kisi_id])
+            try db!.executeUpdate("UPDATE kisiler SET kisi_ad = ?", values: [kisi_ad,kisi_id])
         }catch{
             print(error.localizedDescription)
         }

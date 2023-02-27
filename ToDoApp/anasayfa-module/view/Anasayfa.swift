@@ -83,7 +83,7 @@ extension Anasayfa : UITableViewDelegate,UITableViewDataSource {
         let kisi = kisilerListe[indexPath.row]
         
         hucre.labelAd.text = kisi.kisi_ad
-        hucre.labelTel.text = kisi.kisi_tel
+        
         
         return hucre
     }
