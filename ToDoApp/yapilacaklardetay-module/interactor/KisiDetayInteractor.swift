@@ -17,7 +17,7 @@ class YapilacakDetayInteractor : PresenterToInteractorYapilacakDetayProtocol {
         db = FMDatabase(path: veritabaniURL.path)
     }
     
-    func guncelle(yapilacak_id yapilacak_id: Int, yapilacak_ad yapilacak_ad: String) {
+    func guncelle(yapilacak_id: Int, yapilacak_ad: String) {
         db?.open()
         
         do{
